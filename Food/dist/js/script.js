@@ -225,25 +225,26 @@ window.addEventListener('DOMContentLoaded', function() {
             form.append(spin);
 
             const FormDate = new FormData(form);
-            fetch('server.php', {
-                    method: 'POST',
-                    body: FormDate
-                }).then(date => {
-                    console.log(date);
-                }).then(ThaksForm(messageStatus.asess))
-                .catch(ThaksForm(messageStatus.loading))
-                .finally(form.reset());
+            const obj = {};
+            FormDate.forEach((item, key) => {
+                obj[key] = item;
+            });
 
-            /*  request.addEventListener('load', () => {
-                 if (request.status === 200) {
-                     console.log(request.response);
-                     ThaksForm(messageStatus.asess);
-                     form.reset();
-                 } else {
-                     ThaksForm(messageStatus.loading);
-                 }
-             }); */
+            fetch('js/server.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(obj)
+            }).then(data => {
+                console.log(data);
+                ThaksForm(messageStatus.asess);
 
+            }).catch(() => {
+                ThaksForm(messageStatus.erorr);
+            }).finally(() => {
+                form.reset();
+            });
         });
     }
 
