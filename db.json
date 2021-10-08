@@ -1,0 +1,64 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "name": "bvv",
+      "phone": "vvbbv",
+      "id": 2
+    },
+    {
+      "name": "vcv",
+      "phone": "cvc",
+      "id": 3
+    },
+    {
+      "name": "vbv",
+      "phone": "vbvv",
+      "id": 4
+    },
+    {
+      "name": "dffd",
+      "phone": "dfd",
+      "id": 5
+    },
+    {
+      "name": "cvcc",
+      "phone": "cvcvc",
+      "id": 6
+    },
+    {
+      "name": "xczcx",
+      "phone": "zxzxc",
+      "id": 7
+    },
+    {
+      "name": "мсссмс",
+      "phone": "смсмм",
+      "id": 8
+    },
+    {
+      "name": "fgf",
+      "phone": "dfd",
+      "id": 9
+    },
+    {
+      "name": "fgf",
+      "phone": "аап",
+      "id": 10
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
